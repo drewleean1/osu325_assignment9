@@ -23,6 +23,10 @@ def solve_tsp(G):
         next_vertex = nonZeroMin(current_vertex, visited)
         visited.append(next_vertex[0])
         current_vertex = G[next_vertex[0]]
+    visited = visited[1:]
+    next_vertex = nonZeroMin(current_vertex, visited)
+    visited.append(next_vertex[0])
+    visited.insert(0, 0)
     return visited
 
 G = [

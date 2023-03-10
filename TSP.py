@@ -18,7 +18,6 @@ def nonZeroMin(input, visited):
 def solve_tsp(G):
     current_vertex = G[0]
     visited = [0]
-    print(type(visited))
     while len(visited) < len(G):
         next_vertex = nonZeroMin(current_vertex, visited)
         visited.append(next_vertex[0])
